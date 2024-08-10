@@ -29,23 +29,31 @@ class Queue {
     return this.items.length;
   }
 
+  printTreeQueue(){
+    this.items.forEach(element => {
+      console.log(element.value);
+    });
+  }
+
   print() {
     console.log(this.items.toString());
   }
 }
 
-const queue = new Queue();
-console.log(queue.isEmpty());
+module.exports = Queue;
 
-queue.enqueue(10);
-queue.enqueue(20);
-queue.enqueue(30);
-queue.enqueue(40);
-queue.print();
+// const queue = new Queue();
+// console.log(queue.isEmpty());
 
-console.log(queue.front());
-console.log(queue.size());
+// queue.enqueue(10);
+// queue.enqueue(20);
+// queue.enqueue(30);
+// queue.enqueue(40);
+// queue.print();
 
-queue.dequeue();
-queue.print();
+// console.log(queue.front());
+// console.log(queue.size());
+
+// queue.dequeue();
+// queue.print();
 // console.log('queue items', this.items);
